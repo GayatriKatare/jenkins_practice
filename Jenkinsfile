@@ -9,7 +9,7 @@ pipeline {
         stage('jenkins home') {
             steps {
                 script{
-                    for(int i = 0 ; i < ${paras.Number_of_Clients} ; i++){
+                    for(int i = 0 ; i < "${paras.Number_of_Clients}" ; i++){
                             myparams = string(name: 'MYPARAM', value: "${params.MYPARAM}")
                             build job: 'downstream-pipeline-with-params', parameters: myparams
                     }
