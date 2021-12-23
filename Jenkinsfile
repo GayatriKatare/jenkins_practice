@@ -10,8 +10,7 @@ pipeline {
             steps {
                 script{
                     for(int i = 0 ; i < "${paras.Number_of_Clients}" ; i++){
-                            myparams = string(name: 'MYPARAM', value: "${params.MYPARAM}")
-                            echo "${params.MYPARAM}"
+                             build job: 'PARAM_TEST1', parameters: [string(name: 'MYPARAM', value: "${params.MYPARAM}")]
                     }
                 }
             }
