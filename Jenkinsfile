@@ -1,5 +1,5 @@
 pipeline {
-    agent cli
+    agent {lable 'cli'}
     
     parameters {
         string(name: 'Number_of_Clients', defaultValue: '1', description: 'Total number of client')
