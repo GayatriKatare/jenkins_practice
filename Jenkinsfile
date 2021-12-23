@@ -1,3 +1,4 @@
+def myparams = ""
 pipeline {
     agent any
     
@@ -9,7 +10,7 @@ pipeline {
             steps {
                 Sript{
                     for(int i = 0 ; i < ${paras.Number_of_Clients} ; i++){
-                            def myparams = string(name: 'MYPARAM', value: "${params.MYPARAM}")
+                            myparams = string(name: 'MYPARAM', value: "${params.MYPARAM}")
                             build job: 'downstream-pipeline-with-params', parameters: myparams
                     }
                 }
