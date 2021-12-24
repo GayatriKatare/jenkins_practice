@@ -10,7 +10,7 @@ pipeline {
         stage('jenkins home') {
             steps {
                 script{
-                    data = "${paras.Number_of_Clients}" 
+                    data = "${paras.Number_of_Clients}".toInteger()
                     for(int i = 0; i < data; i++){
                              build job: 'PARAM_TEST1', parameters: [string(name: 'MYPARAM', value: "${params.MYPARAM}")]
                     }
