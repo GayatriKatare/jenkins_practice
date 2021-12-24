@@ -9,7 +9,7 @@ pipeline {
         stage('jenkins home') {
             steps {
                 script{
-                    
+                     echo "File is working"
                     }
             }}
 }}
