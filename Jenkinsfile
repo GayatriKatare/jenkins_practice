@@ -3,7 +3,7 @@ pipeline {
     agent any
     
    parameters {
-        file(name: 'data', file: 'data.txt', description: 'Data file')
+        file(name: 'data', description: 'Data file')
     }
     stages {
         stage('jenkins home') {
