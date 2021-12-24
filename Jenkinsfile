@@ -9,8 +9,8 @@ pipeline {
         stage('jenkins home') {
             steps {
                 script{
-                     
-                     echo "${WORKSPACE}"
+                     myfile = readFile(file: '$workspace/data.txt')
+                     echo "${myfile}"
                     }
             }}
 }}
