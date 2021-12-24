@@ -9,7 +9,7 @@ pipeline {
         stage('jenkins home') {
             steps {
                 script{
-                    myfile = readFile(file: "${WORKSPACE}/data.txt")
+                    myfile = readFile(file: "F:/Devops/Terraform/AWS/data.txt")
                      echo "${myfile}"
                     }
             }}
