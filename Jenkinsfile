@@ -11,8 +11,5 @@ pipeline {
                 script{
                     inputFile = input message: 'Upload file', parameters: [file(name: 'data.txt')]
                     }
-                }
-            }
-        }
-    }
-}
+            }}
+}}
