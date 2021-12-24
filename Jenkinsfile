@@ -9,7 +9,7 @@ pipeline {
         stage('jenkins home') {
             steps {
                 script{
-                     myfile = readFile('list.txt')
+                     myfile = readFile('data.txt')
                      echo "${myfile}"
                     }
             }}
