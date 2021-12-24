@@ -1,4 +1,4 @@
-def inputFile = ""
+def myfile = ""
 pipeline {
     agent any
     
@@ -9,7 +9,8 @@ pipeline {
         stage('jenkins home') {
             steps {
                 script{
-                     echo "File is working"
+                     myfile = readFile('list.txt')
+                     echo "${myfile}"
                     }
             }}
 }}
