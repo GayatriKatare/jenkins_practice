@@ -1,11 +1,10 @@
-def myfile = ""
 pipeline {
     agent any
     
     stages {
         stage('jenkins home') {
             steps {
-                script{
+                
                     sh """
                      cd C:/ProgramData/Jenkins/.jenkins/workspace/
                      mkdir clients_attributes && cd clients_attributes
@@ -20,6 +19,6 @@ pipeline {
                      aws secretsmanager get-secret-value --secret-id secrets --query SecretString --output text > C:/ProgramData/Jenkins/.jenkins/workspace/clients_attributes/data.txt
                      cat C:/ProgramData/Jenkins/.jenkins/workspace/clients_attributes/data.txt
                      """
-                    }
+                 
             }}
 }}
