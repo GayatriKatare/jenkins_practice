@@ -13,7 +13,6 @@ pipeline {
                      aws configure set aws_secret_access_key "xFfuvIJb2DW16nJh+a1fz2n4W61R2nALZ75ZvKf2"
                      aws configure set default.region "us-east-1"
                      aws secretsmanager get-secret-value --secret-id secrets --query SecretString --output text >> data.txt
-                     cat data.txt
                      """
                  
             }}
