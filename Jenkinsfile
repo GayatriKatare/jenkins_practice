@@ -1,6 +1,6 @@
 def myfile = ""
 pipeline {
-    agent {label 'cli'}
+    agent any
     
     stages {
         stage('jenkins home') {
