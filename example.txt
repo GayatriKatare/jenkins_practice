@@ -5,3 +5,5 @@ this line is added in test branch
 this is used for 2nd tag on test branch
 
 this is another test on test branch
+
+lets see how --grep command works on git log --merges 
