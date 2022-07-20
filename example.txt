@@ -1,1 +1,4 @@
-checking cheangest condition with normal PR creation and Merge.
+checking cheangeset condition with normal PR creation and Merge.
+
+checking changeset condition with tag Merge.
+
