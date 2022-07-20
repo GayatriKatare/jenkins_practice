@@ -7,6 +7,7 @@ pipeline {
         changeset "example.txt";
         anyOf {
           branch "main";
+          branch "test";
           branch "master";
         }
       }
