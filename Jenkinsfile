@@ -3,9 +3,16 @@ pipeline {
 
     stages {
         stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
+            when {
+        changeset "example.txt";
+        anyOf {
+          branch "main";
+          branch "master";
+        }
+      }
+      steps {
+        echo "++++It's Working++++"
+      }
         }
     }
 }
