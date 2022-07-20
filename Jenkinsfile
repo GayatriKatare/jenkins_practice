@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('changeset condition') {
             when {
         changeset "example.txt";
         anyOf {
